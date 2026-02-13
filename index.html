@@ -97,11 +97,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="one"> <!-- creates new page -->
 <div id="header" class="w3-container w3-flat-carrot"> <!-- clear/clean header -->
 	<h1>Question 1</h1>
-</div>
+</div> <!-- there to create clear format to make it more readable -->
 <div id="content" class="w3-container">
 	<p>Are your eyes watery or itchy?</p>   
 		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!-- button order kept in the order of Yes first and No second to keep the format constant -->
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 </div> <!-- /content -->
 </div>
@@ -113,8 +113,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 	<p>Do you have a fever?</p>
 		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 </div><!-- /content -->
 </div>	
 
@@ -126,8 +126,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 	<p>Do you have a sore throat?</p>
 		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>	
 		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>	
 </div><!-- /content -->
 </div>	
 
@@ -152,8 +152,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 	<p>Do you have a cough?</p> <!-- extra question for cold -->
 		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
+		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 </div><!-- /content -->
 </div>	
 
