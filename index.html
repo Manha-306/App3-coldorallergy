@@ -32,7 +32,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+  
 
 
 <script>
@@ -64,7 +64,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   </script>
 
 
-
 <style>	
 .body {
      margin: 0em;
@@ -87,7 +86,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 1;
 }
 </style>
-
+</head>
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -102,9 +102,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="one">
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Question 1</h1>
-</div>
-	
+	<h1>Question 1</h1></header>
 <div class="w3-container">
 	<p>Are your eyes watery or itchy?</p>    
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
@@ -114,9 +112,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="two">
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Question 2</h1>
-</div>
-	
+	<h1>Question 2</h1></header>
 <div class="w3-container">
 	<p>Do you have a fever?</p>
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
@@ -127,9 +123,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="three"> <!-- page 3 addition -->
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Question 3</h1>
-</div>
-	
+	<h1>Question 3</h1></header>
 <div class="w3-container">
 	<p>Do you have a sore throat?</p>
 		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
@@ -140,9 +134,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="four"> <!-- page 4 addition -->
 <div id="header" class="w3-container w3-flat-carrot"><!-- hopefully needed to make questions show up -->
-	<h1>Question 4</h1>
-</div>
-	
+	<h1>Question 4</h1></header>	
 <div class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#results_page"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
@@ -153,9 +145,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="results_page"> <!-- results addition -->
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Results</h1>
-</div>
-
+	<h1>Results</h1></header>
 <div class="w3-container">	
 	<a href="#results" onclick="getResults();" class="w3-btn w3-black">Click for Diagnosis</a>
     <p id="results"></p> 
