@@ -4,7 +4,6 @@
  
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
- 
 Authors in chronological order of contribution:
 Tim Riedel
 Manha Sadarulanam
@@ -18,15 +17,12 @@ triedel@utexas.edu.
  
 Brief Description of Goal of Code:
 The goal of this code is to create a web-based diagnostic app that helps users monitor their own symptoms to determine if they have a cold or seasonal allergies. As the user navigates through a sequence of pages, the app uses JavaScript event listeners to capture user symptoms via button clicks. The responses are stored in the respective variables, allowing the app to calculate the final probabilities for each condition using a specific logic table. HTML elements are used to place text, headers, and buttons on the screen, while JavaScript functions make things happen using variables and functions. 
- 
-Known Issues:
-blah, blah, blah, blah
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
-   <head> 
+<head> 
       <title>Hello World</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
@@ -58,10 +54,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       		var resultText = document.getElementById("results");
         	resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%<br> Probability it is a cold = " + coldPercent + "%";
 		}
-  </script>
+</script>
 
 
 <style>	
+/* Styling to manage the full-screen page transitions */
 .body {
      margin: 0em;
 }
@@ -77,7 +74,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     background-color: hsl(0,0%,100%);
 }
 
-/* shows page targeted */
+/* shows page targeted, moves it to the front */
 .page:target {
     left: 0vw; 
     z-index: 1;
@@ -94,7 +91,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!-- button to move forward with process -->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>  <!-- disclaimer about app -->
 </div> 
 	
 <div class="page" id="one"> <!-- creates new page -->
@@ -103,7 +100,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <div id="content" class="w3-container">
 	<p>Are your eyes watery or itchy?</p>   
-		<!-- prompts to click yes/no which adds to indication of allergy or cold -->
+		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 </div> <!-- /content -->
@@ -115,7 +112,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <div id="content" class="w3-container">
 	<p>Do you have a fever?</p>
-		<!-- prompts to click yes/no which adds to indication of allergy or cold -->
+		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
 		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 </div><!-- /content -->
@@ -128,7 +125,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <div id="content" class="w3-container">
 	<p>Do you have a sore throat?</p>
-		<!-- prompts to click yes/no which adds to indication of allergy or cold -->
+		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
 		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>	
 		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 </div><!-- /content -->
@@ -141,7 +138,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <div id="content" class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p>
-		<!-- prompts to click yes/no which adds to indication of allergy or cold -->
+		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
         <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 </div><!-- /content -->
@@ -154,7 +151,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <div id="content" class="w3-container">
 	<p>Do you have a cough?</p> <!-- extra question for cold -->
-		<!-- prompts to click yes/no which adds to indication of allergy or cold -->
+		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
 		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
         <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 </div><!-- /content -->
@@ -167,7 +164,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <div id="content" class="w3-container">
 	<p>Do your symptoms get worse when you are outside?</p> <!-- extra question for allergy -->
-		<!-- prompts to click yes/no which adds to indication of allergy or cold -->
+		<!-- prompts to click yes/no which adds to variable of allergy or cold -->
 		<a href="#results_page"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
         <a href="#results_page"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 </div><!-- /content -->
@@ -179,7 +176,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<h1>Results</h1>
 </div>
 <div id="content" class="w3-container">
-	<a onclick="getResults();" class="w3-btn w3-black">Click for Diagnosis</a>
+	<a onclick="getResults();" class="w3-btn w3-black">Click for Diagnosis</a>  <!-- button to display probability of allergies or cold -->
     <p id="results"></p> 
 			
 </div><!-- /content -->
