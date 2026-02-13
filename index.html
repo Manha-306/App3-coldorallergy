@@ -57,7 +57,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			
         var resultText = document.getElementById("results");
         resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%<br> Probability it is a cold = " + coldPercent + "%";
-
+		}
   </script>
 
 
@@ -92,7 +92,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#intro" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -100,76 +100,70 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div> <!-- adding this because it seems to be missing????? -->
 	
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
-	</div>
-	
-    <div id="content" class="w3-container">
-			<p>Are your eyes watery or itchy?</p>    
-			<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-        	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
-	 </div><!-- /content -->
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Question 1</h1>
 </div>
-<footer class="w3-bottom w3-container w3-flat-carrot"> 
+	
+<div id="content" class="w3-container">
+	<p>Are your eyes watery or itchy?</p>    
+		<a href="#one"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#one"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+</div><!-- /content -->
+</div>
 
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
-	</div>
+<div class="w3-container w3-flat-carrot">
+	<h1>Question 2</h1>
+</div>
 	
-	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-			<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-			<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-	</div><!-- /content -->
+<div id="content" class="w3-container">
+	<p>Do you have a fever?</p>
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+</div><!-- /content -->
 </div>	
-<footer class="w3-bottom w3-container w3-flat-carrot"> 
+
 	
 <div class="page" id="three"> <!-- page 3 addition -->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
-	</div>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Question 3</h1>
+</div>
 	
-	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
-			<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-			<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-	</div><!-- /content -->
+<div id="content" class="w3-container">
+	<p>Do you have a sore throat?</p>
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
+</div><!-- /content -->
 </div>	
-<footer class="w3-bottom w3-container w3-flat-carrot">
 
-	<div class="page" id="four"> <!-- page 4 addition -->
-	<div id="header" class="w3-container w3-flat-carrot"><!-- hopefully needed to make questions show up -->
-		<h1>Question 4</h1>
-	</div>
+
+<div class="page" id="four"> <!-- page 4 addition -->
+<div id="header" class="w3-container w3-flat-carrot"><!-- hopefully needed to make questions show up -->
+	<h1>Question 4</h1>
+</div>
 	
-	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
-			<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-        	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
-	</div><!-- /content -->
+<div id="content" class="w3-container">
+	<p>Do you have a sore throat?</p>
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+        <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+</div><!-- /content -->
 </div>	
-<footer class="w3-bottom w3-container w3-flat-carrot">
 
-	<div class="page" id="results_page"> <!-- results addition -->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-	</div>
-		
-	<div class="w3-container w3-flat-carrot">
-		
-		<div id="content" class="w3-container">
-		<p id="results"></p> 	
-			<a onclick="getResults();" class="w3-btn w3-black">Click for Diagnosis</a>
-            <p id="results"></p> 
+
+<div class="page" id="results_page"> <!-- results addition -->
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Results</h1>
+</div>
+
+<div id="content" class="w3-container">
+	<p id="results"></p> 	
+		<a href="#results" onclick="getResults();" class="w3-btn w3-black">Click for Diagnosis</a>
+        <p id="results"></p> 
 			
 </div><!-- /content -->
 </div>	
+		
 <footer class="w3-bottom w3-container w3-flat-carrot">
-		
-		
-
-	
 </footer>
 
 </body>
