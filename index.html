@@ -36,7 +36,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
+        var allergy_count = 0; //initializing variables
         var cold_count = 0;
 
 
@@ -49,6 +49,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+
+		function getResults() {
+        var total = allergy_count + cold_count;
+        var allergyPercent = (allergy_count / total) * 100;
+        var coldPercent = (cold_count / total) * 100;
+			
+        var resultText = document.getElementById("results");
+        resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%<br> Probability it is a cold = " + coldPercent + "%";
 
   </script>
 
@@ -64,14 +72,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     height: 100vh;
     position: fixed;
     top: 0;
-    left: -100vw;
+    left: -100vw; /* hidden */
     overflow-y: auto;
     z-index: 0;
     background-color: hsl(0,0%,100%);
 }
 
   .page:target {
-    left: 0vw;
+    left: 0vw; /* shows page */
     z-index: 1;
 }
 </style>
@@ -143,7 +151,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 
-	<div class="page" id="results"> <!-- results addition -->
+	<div class="page" id="results_page"> <!-- results addition -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
@@ -152,8 +160,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		<div id="content" class="w3-container">
 		<p id="results"></p> 	
-			var resultText = document.getElementById("results");
-			resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+			<a onclick="getResults();" class="w3-btn w3-black">Click for Diagnosis</a>
+            <p id="results"></p> 
 			
 </div><!-- /content -->
 </div>	
